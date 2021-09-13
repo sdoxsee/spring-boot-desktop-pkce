@@ -1,0 +1,14 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          login-client:
+            provider: aad
+            client-id: 05174c37-cc81-4f40-9fe0-628b1a27ead9
+            client-authentication-method: none
+            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+            scope: openid,profile,email
+        provider:
+          aad:
+            issuer-uri: https://login.microsoftonline.com/debf4b8c-6e3b-4676-89f5-990bf21c8f93/v2.0
