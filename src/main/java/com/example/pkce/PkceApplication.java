@@ -22,6 +22,6 @@ class PkceController {
 	@GetMapping
 	public String index(@RegisteredOAuth2AuthorizedClient("login-client") OAuth2AuthorizedClient client) {
 		System.out.println(client.getAccessToken().getTokenValue());
-		return "index";
+		return "index.html";
 	}
 }
